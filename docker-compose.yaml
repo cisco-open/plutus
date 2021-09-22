@@ -1,0 +1,25 @@
+version: "3"
+services:
+    rest:
+        image: plutus:dev
+        container_name: plutus
+        ports:
+            - "127.0.0.1:8000:8000"
+        depends_on:
+            - "redis"
+        environment: 
+            - VAULT_ADDR=${VAULT_ADDR}
+            - VAULT_TOKEN=${VAULT_TOKEN}
+            - GITHUB_ACCESS_TOKEN=${GITHUB_ACCESS_TOKEN}
+            - REDIS_ADDR=${REDIS_ADDR}
+            - REST_ADDR=${REST_ADDR}
+        volumes:
+          - type: bind
+            source: ./config/config.yaml
+            target: /app/plutus/config/config.yaml
+    redis:
+        image: redis:latest
+        container_name: redis
+        ports:
+            - "6379:6379"
+

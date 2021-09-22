@@ -1,0 +1,64 @@
+route: /namespaces
+
+TYPE: GET
+
+Response
+{
+    namespaces: []string
+}
+
+route: /user
+
+TYPE: POST
+
+Request
+{
+    username: string
+    namespace: string
+}
+
+Response
+{
+    roles: []string,
+    groups: []string,
+    policies: []struct{
+        name: string,
+        roles: []string,
+        groups: []string,
+        entities: string,
+    },
+    paths: []struct{
+        path: string,
+        policy_name: string,
+        capabilities: []string
+    }
+    warning?
+}
+
+
+
+route: path
+
+type: POST
+
+Request
+
+{
+    path: string
+    namespace: string
+}
+
+Response
+{
+    users: []struct{
+        username: string,
+        policies: []struct{
+            name: string,
+            roles: []string,
+            groups: []string,
+            entitities: string,
+            capabilities: []string
+        },
+        capabilities: []string
+    }
+}
