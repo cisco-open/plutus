@@ -8,7 +8,9 @@ require (
 	github.com/google/go-querystring v1.1.0 // indirect
 	github.com/gorilla/mux v1.8.0
 	github.com/hashicorp/hcl/v2 v2.10.1
-	github.com/hashicorp/vault/api v1.1.1
+	github.com/hashicorp/vault/api v1.4.1
+	github.com/onsi/ginkgo v1.10.1 // indirect
+	github.com/onsi/gomega v1.7.0 // indirect
 	github.com/pkg/errors v0.9.1
 	github.com/rs/cors v1.8.0
 	github.com/sirupsen/logrus v1.8.1
