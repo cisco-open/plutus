@@ -32,11 +32,11 @@ export REST_ADDR="REST API address"
 You need to add a `config.yaml` file in a config folder. So the file path from the root directory is `config/config.yaml`. A sample config is provided below
 
 ```yaml
-namespaces:                                                                 # Namespaces you want plutus to cover
+namespaces:                                                             # Namespaces you want plutus to cover
   - <example-namespace>
-uiAddress: "localhost:4200?baseURL=localhost:8000"                          # UI redirect that can be used to redirect to the proper UI address
+uiAddress: "localhost:4200?baseURL=localhost:8000"                      # UI redirect that can be used to redirect to the proper UI address
 githubEnterpise:
-  baseURL: "https://github.com/api/v3"                                  # Github Enterprise Reader API base URL
+  baseURL: "https://your-github.somedomain.com/api/v3"                  # Github Enterprise Reader API base URL
   groupsRepoPath: "/path/to/repo"                                       # Github Enterprise Repo that has the groups information
 ```
 
@@ -56,7 +56,7 @@ spec:
   - person-b
   ...
   ```
-  As of now, only the Entterprise Github Groups Reader is supported but more can be added easily. Look at the group-reader package [README.md](https://github.com/cisco-open/plutus/blob/main/groups-reader/README.md)
+  As of now, only the Enterprise Github Groups Reader is supported but more can be added easily. Look at the group-reader package [README.md](https://github.com/cisco-open/plutus/blob/main/groups-reader/README.md)
 ## How to run
 
 #### Running locally (Docker)
