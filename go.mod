@@ -13,6 +13,8 @@ require (
 	github.com/rs/cors v1.8.0
 	github.com/sirupsen/logrus v1.8.1
 	github.com/urfave/cli/v2 v2.3.0
-	golang.org/x/oauth2 v0.0.0-20210810183815-faf39c7919d5
+	golang.org/x/net v0.0.0-20200822124328-c89045814202 // indirect
+	golang.org/x/oauth2 v0.20.0
+	golang.org/x/sys v0.0.0-20200803210538-64077c9b5642 // indirect
 	gopkg.in/yaml.v2 v2.4.0
 )
